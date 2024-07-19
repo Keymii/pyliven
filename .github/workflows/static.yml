@@ -31,9 +31,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Override page_url
-        id: change-page-url
-        run: echo "docs_url=${{ steps.deployment.outputs.page_url }}docs/" >> $GITHUB_OUTPUT
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
@@ -43,3 +40,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Override page_url
+        id: change-page-url
+        run: echo "docs_url=${{ steps.deployment.outputs.page_url }}docs/" >> $GITHUB_OUTPUT
