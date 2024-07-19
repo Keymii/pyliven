@@ -41,16 +41,14 @@ hljs.highlightAll();
 </code></dt>
 <dd>
 <div class="desc"><p>LiveNum is a stateful class that allows you to create a number whose updation will update past calculations.</p>
-<p>LiveNum is a stateful class that allows you to create a number whose updation will update past calculations.
-</p>
 <p>Operator Table:
 0: Addition
 1: Subtraction
 2: Multiplication
 3: Division
 4: Floor Division
-5. Modulo
-6. Power</p></div>
+5: Modulo
+6: Power</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -63,16 +61,16 @@ hljs.highlightAll();
     # User API functions
     def __init__(self, core: Union[int,float,&#39;LiveNum&#39;], side : Optional[Union[int,float,&#39;LiveNum&#39;]] = None , operator : Optional[int] = None) -&gt; None:
         
-        &#34;&#34;&#34;LiveNum is a stateful class that allows you to create a number whose updation will update past calculations.        
-        
+        &#34;&#34;&#34;  
         Operator Table:
             0: Addition
             1: Subtraction
             2: Multiplication
             3: Division
             4: Floor Division 
-            5. Modulo
-            6. Power&#34;&#34;&#34;
+            5: Modulo
+            6: Power
+        &#34;&#34;&#34;
         
         if not isinstance(core, (int, float, LiveNum)):
             raise ImproperCoreValueError
