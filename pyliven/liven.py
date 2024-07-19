@@ -10,16 +10,16 @@ class LiveNum():
     # User API functions
     def __init__(self, core: Union[int,float,'LiveNum'], side : Optional[Union[int,float,'LiveNum']] = None , operator : Optional[int] = None) -> None:
         
-        """LiveNum is a stateful class that allows you to create a number whose updation will update past calculations.        
-        
+        """  
         Operator Table:
             0: Addition
             1: Subtraction
             2: Multiplication
             3: Division
             4: Floor Division 
-            5. Modulo
-            6. Power"""
+            5: Modulo
+            6: Power
+        """
         
         if not isinstance(core, (int, float, LiveNum)):
             raise ImproperCoreValueError
