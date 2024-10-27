@@ -81,9 +81,10 @@ class LiveNum():
         
     def update(self, value):
         """Updates the value of the LiveNum object."""
-        if not isinstance(value, (int, float)):
+        if not isinstance(value, (int, float, LiveNum)):
             raise ImproperUpdateValueError
-        
+        if isinstance(value, LiveNum):
+            value = value.value()
         self._core = value
         self._side = None
         self._operator = None

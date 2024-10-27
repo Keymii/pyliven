@@ -21,4 +21,4 @@ class MissingOperatorOrSideError(Exception):
 class ImproperUpdateValueError(Exception):
     """Raised when an improper value is passed to update method"""
     def __init__(self):
-        super().__init__("Update value must be a number (int or float)")
+        super().__init__("Update value must be a number (int, float, or LiveNum object)")
